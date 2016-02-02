@@ -16,5 +16,15 @@ namespace Win_forms
         {
             InitializeComponent();
         }
+
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Информация о программе.", "О программе");
+        }
     }
 }
