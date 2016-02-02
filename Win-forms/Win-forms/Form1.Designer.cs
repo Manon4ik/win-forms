@@ -46,6 +46,10 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.btnRandom = new System.Windows.Forms.Button();
             this.lblRandom = new System.Windows.Forms.Label();
+            this.tbRandom = new System.Windows.Forms.TextBox();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.rtnRandomCopy = new System.Windows.Forms.Button();
+            this.cbRandom = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -165,6 +169,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbRandom);
+            this.tabPage2.Controls.Add(this.rtnRandomCopy);
+            this.tabPage2.Controls.Add(this.btnRandomClear);
+            this.tabPage2.Controls.Add(this.tbRandom);
             this.tabPage2.Controls.Add(this.lblRandom);
             this.tabPage2.Controls.Add(this.btnRandom);
             this.tabPage2.Controls.Add(this.numericUpDown2);
@@ -236,9 +244,48 @@
             this.lblRandom.AutoSize = true;
             this.lblRandom.Location = new System.Drawing.Point(165, 71);
             this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(57, 13);
+            this.lblRandom.Size = new System.Drawing.Size(13, 13);
             this.lblRandom.TabIndex = 5;
-            this.lblRandom.Text = "lblRandom";
+            this.lblRandom.Text = "0";
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(157, 108);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(100, 95);
+            this.tbRandom.TabIndex = 6;
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Location = new System.Drawing.Point(12, 108);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // rtnRandomCopy
+            // 
+            this.rtnRandomCopy.Location = new System.Drawing.Point(12, 138);
+            this.rtnRandomCopy.Name = "rtnRandomCopy";
+            this.rtnRandomCopy.Size = new System.Drawing.Size(75, 23);
+            this.rtnRandomCopy.TabIndex = 8;
+            this.rtnRandomCopy.Text = "Копировать";
+            this.rtnRandomCopy.UseVisualStyleBackColor = true;
+            this.rtnRandomCopy.Click += new System.EventHandler(this.rtnRandomCopy_Click);
+            // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(12, 168);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(107, 17);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "Без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -284,6 +331,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbRandom;
+        private System.Windows.Forms.Button btnRandomClear;
+        private System.Windows.Forms.Button rtnRandomCopy;
+        private System.Windows.Forms.CheckBox cbRandom;
     }
 }
 

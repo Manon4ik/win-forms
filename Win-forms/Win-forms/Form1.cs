@@ -56,6 +56,30 @@ namespace Win_forms
             int n;
             n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value) + 1);
             lblRandom.Text = n.ToString();
+            if (cbRandom.Checked == true)
+            {
+                int i = 0;
+
+                while (tbRandom.Text.IndexOf(n.ToString()) != -1)
+                {
+                    n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value) + 1);
+                    i++;
+                    if (i > 100) break;
+                }                    
+                if (i<=100) tbRandom.AppendText(n + "\n");
+            }
+            else tbRandom.AppendText(n + "\n");
+            
+        }
+
+        private void btnRandomClear_Click(object sender, EventArgs e)
+        {
+            tbRandom.Clear();
+        }
+
+        private void rtnRandomCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(tbRandom.Text);
         }
     }
 }
