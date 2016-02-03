@@ -70,6 +70,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.rtbNotepad = new System.Windows.Forms.RichTextBox();
+            this.btSwap = new System.Windows.Forms.Button();
+            this.cbMetric = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -189,6 +191,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.cbMetric);
+            this.tabPage5.Controls.Add(this.btSwap);
             this.tabPage5.Controls.Add(this.tbTo);
             this.tabPage5.Controls.Add(this.tbFrom);
             this.tabPage5.Controls.Add(this.btnConvert);
@@ -203,7 +207,7 @@
             // 
             // tbTo
             // 
-            this.tbTo.Location = new System.Drawing.Point(189, 66);
+            this.tbTo.Location = new System.Drawing.Point(192, 162);
             this.tbTo.Name = "tbTo";
             this.tbTo.ReadOnly = true;
             this.tbTo.Size = new System.Drawing.Size(71, 20);
@@ -211,7 +215,7 @@
             // 
             // tbFrom
             // 
-            this.tbFrom.Location = new System.Drawing.Point(9, 66);
+            this.tbFrom.Location = new System.Drawing.Point(12, 162);
             this.tbFrom.Name = "tbFrom";
             this.tbFrom.Size = new System.Drawing.Size(71, 20);
             this.tbFrom.TabIndex = 3;
@@ -219,7 +223,7 @@
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(97, 38);
+            this.btnConvert.Location = new System.Drawing.Point(100, 159);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(75, 23);
             this.btnConvert.TabIndex = 2;
@@ -237,7 +241,7 @@
             "m",
             "kl",
             "mile"});
-            this.cbTo.Location = new System.Drawing.Point(189, 13);
+            this.cbTo.Location = new System.Drawing.Point(192, 130);
             this.cbTo.Name = "cbTo";
             this.cbTo.Size = new System.Drawing.Size(71, 21);
             this.cbTo.TabIndex = 1;
@@ -253,7 +257,7 @@
             "m",
             "kl",
             "mile"});
-            this.cbFrom.Location = new System.Drawing.Point(9, 13);
+            this.cbFrom.Location = new System.Drawing.Point(12, 130);
             this.cbFrom.Name = "cbFrom";
             this.cbFrom.Size = new System.Drawing.Size(71, 21);
             this.cbFrom.TabIndex = 0;
@@ -531,6 +535,29 @@
             this.rtbNotepad.TabIndex = 0;
             this.rtbNotepad.Text = "";
             // 
+            // btSwap
+            // 
+            this.btSwap.Location = new System.Drawing.Point(100, 130);
+            this.btSwap.Name = "btSwap";
+            this.btSwap.Size = new System.Drawing.Size(75, 23);
+            this.btSwap.TabIndex = 5;
+            this.btSwap.Text = "<->";
+            this.btSwap.UseVisualStyleBackColor = true;
+            this.btSwap.Click += new System.EventHandler(this.btSwap_Click);
+            // 
+            // cbMetric
+            // 
+            this.cbMetric.FormattingEnabled = true;
+            this.cbMetric.Items.AddRange(new object[] {
+            "Длина",
+            "Вес"});
+            this.cbMetric.Location = new System.Drawing.Point(100, 80);
+            this.cbMetric.Name = "cbMetric";
+            this.cbMetric.Size = new System.Drawing.Size(75, 21);
+            this.cbMetric.TabIndex = 6;
+            this.cbMetric.Text = "Длина";
+            this.cbMetric.SelectedIndexChanged += new System.EventHandler(this.cbMetric_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,6 +634,8 @@
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.ComboBox cbTo;
         private System.Windows.Forms.ComboBox cbFrom;
+        private System.Windows.Forms.Button btSwap;
+        private System.Windows.Forms.ComboBox cbMetric;
     }
 }
 
