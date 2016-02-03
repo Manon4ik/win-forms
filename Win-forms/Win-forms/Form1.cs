@@ -81,5 +81,49 @@ namespace Win_forms
         {
             Clipboard.SetText(tbRandom.Text);
         }
+
+        private void tsmiInsertDate_Click(object sender, EventArgs e)
+        {
+            rtbNotepad.AppendText(DateTime.Now.ToShortDateString()+"\n");
+        }
+
+        private void tsmiInsertTime_Click(object sender, EventArgs e)
+        {
+            rtbNotepad.AppendText(DateTime.Now.ToShortTimeString() + "\n");
+        }
+
+        void LoadNotepad()
+        {
+            try
+            {
+                rtbNotepad.SaveFile("notepad1.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при сохранении.", "Ошибка");
+            }
+        }
+
+        private void tsmiSave_Click(object sender, EventArgs e)
+        {
+            LoadNotepad();
+        }
+
+        private void tsmiLoad_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                rtbNotepad.LoadFile("notepad1.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при загрузке.", "Ошибка");
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadNotepad();
+        }
     }
 }
