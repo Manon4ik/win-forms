@@ -31,6 +31,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.блокнотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInsertTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.помощьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -40,31 +46,33 @@
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.btnRandom = new System.Windows.Forms.Button();
-            this.lblRandom = new System.Windows.Forms.Label();
-            this.tbRandom = new System.Windows.Forms.TextBox();
-            this.btnRandomClear = new System.Windows.Forms.Button();
-            this.rtnRandomCopy = new System.Windows.Forms.Button();
             this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.rtnRandomCopy = new System.Windows.Forms.Button();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.tbRandom = new System.Windows.Forms.TextBox();
+            this.lblRandom = new System.Windows.Forms.Label();
+            this.btnRandom = new System.Windows.Forms.Button();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.rtbNotepad = new System.Windows.Forms.RichTextBox();
-            this.блокнотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertDate = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInsertTime = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.clbPassword = new System.Windows.Forms.CheckedListBox();
+            this.nudPassLength = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCreatePassword = new System.Windows.Forms.Button();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPassLength)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -94,6 +102,55 @@
             this.tsmiExit.Text = "Выход";
             this.tsmiExit.Click += new System.EventHandler(this.tsmiExit_Click);
             // 
+            // блокнотToolStripMenuItem
+            // 
+            this.блокнотToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiInsertDate,
+            this.tsmiInsertTime,
+            this.toolStripMenuItem1,
+            this.tsmiSave,
+            this.tsmiLoad});
+            this.блокнотToolStripMenuItem.Name = "блокнотToolStripMenuItem";
+            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.блокнотToolStripMenuItem.Text = "Блокнот";
+            // 
+            // tsmiInsertDate
+            // 
+            this.tsmiInsertDate.Name = "tsmiInsertDate";
+            this.tsmiInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmiInsertDate.Size = new System.Drawing.Size(232, 22);
+            this.tsmiInsertDate.Text = "Вставить дату";
+            this.tsmiInsertDate.Click += new System.EventHandler(this.tsmiInsertDate_Click);
+            // 
+            // tsmiInsertTime
+            // 
+            this.tsmiInsertTime.Name = "tsmiInsertTime";
+            this.tsmiInsertTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.tsmiInsertTime.Size = new System.Drawing.Size(232, 22);
+            this.tsmiInsertTime.Text = "Вставить время";
+            this.tsmiInsertTime.Click += new System.EventHandler(this.tsmiInsertTime_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(229, 6);
+            // 
+            // tsmiSave
+            // 
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.Size = new System.Drawing.Size(232, 22);
+            this.tsmiSave.Text = "Сохранить";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            // 
+            // tsmiLoad
+            // 
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.Size = new System.Drawing.Size(232, 22);
+            this.tsmiLoad.Text = "Загрузить";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
+            // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,12 +162,13 @@
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(152, 22);
+            this.tsmiAbout.Size = new System.Drawing.Size(149, 22);
             this.tsmiAbout.Text = "О программе";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -198,35 +256,63 @@
             this.tabPage2.Text = "Генератор";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // cbRandom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(20, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "От";
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(12, 168);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(107, 17);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "Без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // rtnRandomCopy
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "До";
+            this.rtnRandomCopy.Location = new System.Drawing.Point(12, 138);
+            this.rtnRandomCopy.Name = "rtnRandomCopy";
+            this.rtnRandomCopy.Size = new System.Drawing.Size(75, 23);
+            this.rtnRandomCopy.TabIndex = 8;
+            this.rtnRandomCopy.Text = "Копировать";
+            this.rtnRandomCopy.UseVisualStyleBackColor = true;
+            this.rtnRandomCopy.Click += new System.EventHandler(this.rtnRandomCopy_Click);
             // 
-            // numericUpDown1
+            // btnRandomClear
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(78, 34);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(58, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.btnRandomClear.Location = new System.Drawing.Point(12, 108);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(157, 108);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(100, 95);
+            this.tbRandom.TabIndex = 6;
+            // 
+            // lblRandom
+            // 
+            this.lblRandom.AutoSize = true;
+            this.lblRandom.Location = new System.Drawing.Point(165, 71);
+            this.lblRandom.Name = "lblRandom";
+            this.lblRandom.Size = new System.Drawing.Size(13, 13);
+            this.lblRandom.TabIndex = 5;
+            this.lblRandom.Text = "0";
+            // 
+            // btnRandom
+            // 
+            this.btnRandom.Location = new System.Drawing.Point(157, 34);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(75, 23);
+            this.btnRandom.TabIndex = 4;
+            this.btnRandom.Text = "Задать";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
             // numericUpDown2
             // 
@@ -240,63 +326,35 @@
             0,
             0});
             // 
-            // btnRandom
+            // numericUpDown1
             // 
-            this.btnRandom.Location = new System.Drawing.Point(157, 34);
-            this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(75, 23);
-            this.btnRandom.TabIndex = 4;
-            this.btnRandom.Text = "Задать";
-            this.btnRandom.UseVisualStyleBackColor = true;
-            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            this.numericUpDown1.Location = new System.Drawing.Point(78, 34);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(58, 20);
+            this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // lblRandom
+            // label2
             // 
-            this.lblRandom.AutoSize = true;
-            this.lblRandom.Location = new System.Drawing.Point(165, 71);
-            this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(13, 13);
-            this.lblRandom.TabIndex = 5;
-            this.lblRandom.Text = "0";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(22, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "До";
             // 
-            // tbRandom
+            // label1
             // 
-            this.tbRandom.Location = new System.Drawing.Point(157, 108);
-            this.tbRandom.Multiline = true;
-            this.tbRandom.Name = "tbRandom";
-            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbRandom.Size = new System.Drawing.Size(100, 95);
-            this.tbRandom.TabIndex = 6;
-            // 
-            // btnRandomClear
-            // 
-            this.btnRandomClear.Location = new System.Drawing.Point(12, 108);
-            this.btnRandomClear.Name = "btnRandomClear";
-            this.btnRandomClear.Size = new System.Drawing.Size(75, 23);
-            this.btnRandomClear.TabIndex = 7;
-            this.btnRandomClear.Text = "Очистить";
-            this.btnRandomClear.UseVisualStyleBackColor = true;
-            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
-            // 
-            // rtnRandomCopy
-            // 
-            this.rtnRandomCopy.Location = new System.Drawing.Point(12, 138);
-            this.rtnRandomCopy.Name = "rtnRandomCopy";
-            this.rtnRandomCopy.Size = new System.Drawing.Size(75, 23);
-            this.rtnRandomCopy.TabIndex = 8;
-            this.rtnRandomCopy.Text = "Копировать";
-            this.rtnRandomCopy.UseVisualStyleBackColor = true;
-            this.rtnRandomCopy.Click += new System.EventHandler(this.rtnRandomCopy_Click);
-            // 
-            // cbRandom
-            // 
-            this.cbRandom.AutoSize = true;
-            this.cbRandom.Location = new System.Drawing.Point(12, 168);
-            this.cbRandom.Name = "cbRandom";
-            this.cbRandom.Size = new System.Drawing.Size(107, 17);
-            this.cbRandom.TabIndex = 9;
-            this.cbRandom.Text = "Без повторений";
-            this.cbRandom.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "От";
             // 
             // tabPage3
             // 
@@ -317,54 +375,81 @@
             this.rtbNotepad.TabIndex = 0;
             this.rtbNotepad.Text = "";
             // 
-            // блокнотToolStripMenuItem
+            // tabPage4
             // 
-            this.блокнотToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiInsertDate,
-            this.tsmiInsertTime,
-            this.toolStripMenuItem1,
-            this.tsmiSave,
-            this.tsmiLoad});
-            this.блокнотToolStripMenuItem.Name = "блокнотToolStripMenuItem";
-            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.блокнотToolStripMenuItem.Text = "Блокнот";
+            this.tabPage4.Controls.Add(this.tbPassword);
+            this.tabPage4.Controls.Add(this.btnCreatePassword);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Controls.Add(this.nudPassLength);
+            this.tabPage4.Controls.Add(this.clbPassword);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(276, 211);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Пароли";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tsmiInsertDate
+            // clbPassword
             // 
-            this.tsmiInsertDate.Name = "tsmiInsertDate";
-            this.tsmiInsertDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.tsmiInsertDate.Size = new System.Drawing.Size(232, 22);
-            this.tsmiInsertDate.Text = "Вставить дату";
-            this.tsmiInsertDate.Click += new System.EventHandler(this.tsmiInsertDate_Click);
+            this.clbPassword.CheckOnClick = true;
+            this.clbPassword.FormattingEnabled = true;
+            this.clbPassword.Items.AddRange(new object[] {
+            "Цифры",
+            "Прописные буквы",
+            "Строчные буквы",
+            "Спец. символы: %, *, ), ?, #, $, ^,&,~"});
+            this.clbPassword.Location = new System.Drawing.Point(24, 29);
+            this.clbPassword.Name = "clbPassword";
+            this.clbPassword.Size = new System.Drawing.Size(217, 64);
+            this.clbPassword.TabIndex = 0;
             // 
-            // tsmiInsertTime
+            // nudPassLength
             // 
-            this.tsmiInsertTime.Name = "tsmiInsertTime";
-            this.tsmiInsertTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.T)));
-            this.tsmiInsertTime.Size = new System.Drawing.Size(232, 22);
-            this.tsmiInsertTime.Text = "Вставить время";
-            this.tsmiInsertTime.Click += new System.EventHandler(this.tsmiInsertTime_Click);
+            this.nudPassLength.Location = new System.Drawing.Point(99, 111);
+            this.nudPassLength.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.nudPassLength.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudPassLength.Name = "nudPassLength";
+            this.nudPassLength.Size = new System.Drawing.Size(120, 20);
+            this.nudPassLength.TabIndex = 1;
+            this.nudPassLength.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
             // 
-            // toolStripMenuItem1
+            // label3
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(229, 6);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Длина пароля";
             // 
-            // tsmiSave
+            // btnCreatePassword
             // 
-            this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(232, 22);
-            this.tsmiSave.Text = "Сохранить";
-            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
+            this.btnCreatePassword.Location = new System.Drawing.Point(12, 156);
+            this.btnCreatePassword.Name = "btnCreatePassword";
+            this.btnCreatePassword.Size = new System.Drawing.Size(127, 23);
+            this.btnCreatePassword.TabIndex = 3;
+            this.btnCreatePassword.Text = "Создать пароль";
+            this.btnCreatePassword.UseVisualStyleBackColor = true;
+            this.btnCreatePassword.Click += new System.EventHandler(this.btnCreatePassword_Click);
             // 
-            // tsmiLoad
+            // tbPassword
             // 
-            this.tsmiLoad.Name = "tsmiLoad";
-            this.tsmiLoad.Size = new System.Drawing.Size(232, 22);
-            this.tsmiLoad.Text = "Загрузить";
-            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
+            this.tbPassword.Location = new System.Drawing.Point(12, 186);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbPassword.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -384,9 +469,12 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPassLength)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,6 +512,13 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tsmiSave;
         private System.Windows.Forms.ToolStripMenuItem tsmiLoad;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.CheckedListBox clbPassword;
+        private System.Windows.Forms.NumericUpDown nudPassLength;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCreatePassword;
+        private System.Windows.Forms.TextBox tbPassword;
     }
 }
 
